@@ -852,6 +852,10 @@ def OMP_For : Directive<"for"> {
   let category = CA_Executable;
   let languages = [L_C];
 }
+def OMP_Fuse : Directive<"fuse"> {
+  let association = AS_Loop;
+  let category = CA_Executable;
+}
 def OMP_Interchange : Directive<"interchange"> {
   let allowedOnceClauses = [
     VersionedClause<OMPC_Permutation>,
